@@ -35,7 +35,7 @@ package "python-cql" do
   action :install
 end
 
-package "dsc12" do
+package default["cassandra"]["package_version"] do
   action :install
 end
 
