@@ -2,7 +2,7 @@ default[:cassandra] = {
   :cluster_name => "Test Cluster",
   :initial_token => "",
   :version => '1.2.9',
-  :package_version => (default[:cassandra][:version] == "2.0" ? "dsc20" : "dsc12")
+  :package_version => (default[:cassandra][:version] == "2.0" ? "dsc20" : "dsc12"),
   :user => "cassandra",
   :jvm  => {
     :xms => 32,
