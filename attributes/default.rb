@@ -36,8 +36,8 @@ default[:cassandra][:tarball] = {
 
 case node["cassandra"]["version"]
 when "2.0"
-  default["cassandra"]["package_version"] = "dsc20"
+  node.set["cassandra"]["package_version"] = "dsc20"
 else
-  default["cassandra"]["package_version"] = "dsc12"
+  node.set["cassandra"]["package_version"] = "dsc12"
 end
 
