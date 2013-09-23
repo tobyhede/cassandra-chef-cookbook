@@ -34,8 +34,6 @@ default[:cassandra][:tarball] = {
   :md5 => "f6a5738200b281ef098e90be3fa30cf2"
 }
 
-  :package_version => (default[:cassandra][:version] == "2.0" ? "dsc20" : ),
-
 case node["cassandra"]["version"]
 when "2.0"
   default["cassandra"]["package_version"] = "dsc20"
