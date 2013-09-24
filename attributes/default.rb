@@ -35,11 +35,13 @@ default[:cassandra][:tarball] = {
   :md5 => "f6a5738200b281ef098e90be3fa30cf2"
 }
 
-if node["cassandra"]["package_version"] 
-  case node["cassandra"]["version"]
-    when "2.0"
-      node.set["cassandra"]["package_version"] = "dsc20"
-    else
-      node.set["cassandra"]["package_version"] = "dsc12"
-  end
-end
+
+
+# if node["cassandra"]["package_version"] 
+#   case node["cassandra"]["version"]
+#     when "2.0"
+#       node.set["cassandra"]["package_version"] = "dsc20"
+#     else
+#       node.set["cassandra"]["package_version"] = "dsc12"
+#   end
+# end
